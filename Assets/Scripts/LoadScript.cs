@@ -15,6 +15,8 @@ public class LoadScript : MonoBehaviour
     private Settings settings;
     private Manager manager;
     private GameObject map;
+    private Animal animal;
+
     
 
 
@@ -71,7 +73,22 @@ public class LoadScript : MonoBehaviour
     }
 
     public void InitializeAnimals()
-    {
+    { 
+        double startAnimals = Settings.MaxAnimals / 10;
+        double pPercent = Math.Ceiling(Settings.Preditors / 8.0);
+        double hPercent = 100 - pPercent;
+        
+        double preditors = Math.Ceiling(startAnimals * (pPercent / 100));
+        double herbivores = Math.Ceiling(startAnimals * (hPercent / 100));
+
+        Debug.Log("Total :" + startAnimals);
+        Debug.Log("P : " + preditors);
+        Debug.Log("H : " + herbivores);
+     
+        for(int i = 1; i <= startAnimals; i++); 
+        {
+            
+        }
 
     }
 
