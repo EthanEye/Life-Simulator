@@ -47,20 +47,10 @@ public class StartMenu : MonoBehaviour
 
     private void initializeSliders()
     {
-        mapSizeSlider = startCanvas.transform.Find("Panel/Components/Map Size").GetComponent<Slider>();
+        mapSizeSlider = startCanvas.transform.Find("Panel/Components/MapSize").GetComponent<Slider>();
         mapSizeSlider.onValueChanged.AddListener(OnMapSizeChanged);
 
-        maxAnimalsSlider = startCanvas.transform.Find("Panel/Components/Max Animals").GetComponent<Slider>();
-        maxAnimalsSlider.onValueChanged.AddListener(OnMaxAnimalsChanged);
-
-        foodRateSlider = startCanvas.transform.Find("Panel/Components/Food Rate").GetComponent<Slider>();
-        foodRateSlider.onValueChanged.AddListener(OnFoodRateChanged);
-
-        hungerSlider = startCanvas.transform.Find("Panel/Components/Hunger").GetComponent<Slider>();
-        hungerSlider.onValueChanged.AddListener(OnHungerChanged);
-
-        preditorSlider = startCanvas.transform.Find("Panel/Components/Preditors").GetComponent<Slider>();
-        preditorSlider.onValueChanged.AddListener(OnPreditorChanged);
+      
 
 
     }
@@ -154,7 +144,7 @@ public class StartMenu : MonoBehaviour
 
     private void OnMapSizeChanged(float arg0)
     {
-
+        
         Text mapSizeText = mapSizeSlider.transform.Find("Subtext").GetComponent<Text>();
         if (arg0 == 0)
         {
@@ -194,10 +184,10 @@ public class StartMenu : MonoBehaviour
         }
         
         settings.MapSize = (int) mapSizeSlider.value;
-        settings.MaxAnimals = (int) maxAnimalsSlider.value;
-        settings.FoodRate = (int) foodRateSlider.value;
-        settings.Hunger = (int) hungerSlider.value;
-        settings.Preditors = (int) preditorSlider.value;
+        // settings.MaxAnimals = (int) maxAnimalsSlider.value;
+        // settings.FoodRate = (int) foodRateSlider.value;
+        // settings.Hunger = (int) hungerSlider.value;
+        // settings.Preditors = (int) preditorSlider.value;
 
 
     }

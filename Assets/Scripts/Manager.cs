@@ -32,8 +32,10 @@ public class Manager : MonoBehaviour
 
     public Settings Settings
     {
+        
         get { return settings; }
-        set { settings = value; }
+        set { settings = value;
+        Debug.Log("Manager: Settings set"); }
     }
 
 

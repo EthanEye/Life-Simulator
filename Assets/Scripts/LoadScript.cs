@@ -66,6 +66,8 @@ public class LoadScript : MonoBehaviour
             mainCam.transform.position = pos;
         }
         map.SetActive(true);
+
+        settings.PrintSettings();
     }
 
     public void InitializeAnimals()

@@ -73,12 +73,12 @@ public class AnimalGui : MonoBehaviour
 
     private void getTextComponents(Transform canvasTransform)
     {
-        xCoord = canvasTransform.Find("Panel/x").GetComponent<Text>();
-        zCoord = canvasTransform.Find("Panel/z").GetComponent<Text>();
-        title = canvasTransform.Find("Panel/title").GetComponent<Text>();
-        health = canvasTransform.Find("Panel/health").GetComponent<Text>();
-        hunger = canvasTransform.Find("Panel/hunger").GetComponent<Text>();
-        speed = canvasTransform.Find("Panel/speed").GetComponent<Text>();
+        xCoord = canvasTransform.Find("Panel/Horizontal_Stats/x").GetComponent<Text>();
+        zCoord = canvasTransform.Find("Panel/Horizontal_Stats/z").GetComponent<Text>();
+        title = canvasTransform.Find("Panel/Verticle_Stats/title").GetComponent<Text>();
+        health = canvasTransform.Find("Panel/Verticle_Stats/health").GetComponent<Text>();
+        hunger = canvasTransform.Find("Panel/Verticle_Stats/hunger").GetComponent<Text>();
+        speed = canvasTransform.Find("Panel/Verticle_Stats/speed").GetComponent<Text>();
     }
 
     public void updateTitle()
