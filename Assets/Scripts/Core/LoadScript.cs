@@ -16,6 +16,8 @@ public class LoadScript : MonoBehaviour
     private Manager manager;
     private GameObject map;
     private Animal animal;
+    private int preditors;
+    private int herbivores;
 
     
 
@@ -78,18 +80,45 @@ public class LoadScript : MonoBehaviour
         double pPercent = Math.Ceiling(Settings.Preditors / 8.0);
         double hPercent = 100 - pPercent;
         
-        double preditors = Math.Ceiling(startAnimals * (pPercent / 100));
-        double herbivores = Math.Ceiling(startAnimals * (hPercent / 100));
+        preditors = (int) Math.Ceiling(startAnimals * (pPercent / 100));
+        herbivores = (int) Math.Ceiling(startAnimals * (hPercent / 100));
 
-        Debug.Log("Total :" + startAnimals);
+        Debug.Log("Total : " + startAnimals);
         Debug.Log("P : " + preditors);
         Debug.Log("H : " + herbivores);
      
-        for(int i = 1; i <= startAnimals; i++); 
+        SpawnEntities();
+
+    }
+
+    public void SpawnEntities()
+    {
+
+        
+
+        RandomizePreditors();
+
+        
+     
+        
+    }
+
+    private void RandomizePreditors()
+    {
+           for(int i = 1; i <= preditors; i++)
         {
             
         }
+        RandomizeHerbivores();
+    }
 
+    private void RandomizeHerbivores()
+    {
+         for(int i = 1; i <= herbivores; i++)
+        {
+            
+        }
+        
     }
 
     public void StartManager()
